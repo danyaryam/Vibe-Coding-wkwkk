@@ -1,4 +1,5 @@
 import { Elysia } from 'elysia';
+import { usersRoute } from './routes/users-route';
 
 // Initialize port from environment or use default
 const port = parseInt(process.env.PORT || '3000');
@@ -13,6 +14,7 @@ const app = new Elysia()
     status: 'ok',
     timestamp: new Date().toISOString(),
   }))
+  .use(usersRoute)
   .listen(port);
 
 console.log(`🦊 Server running at http://localhost:${port}`);
