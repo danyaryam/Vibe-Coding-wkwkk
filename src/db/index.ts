@@ -5,7 +5,7 @@ import mysql from 'mysql2/promise';
 const dbHost = process.env.DB_HOST || 'localhost';
 const dbPort = parseInt(process.env.DB_PORT || '3306');
 const dbUser = process.env.DB_USER || 'root';
-const dbPassword = process.env.DB_PASSWORD || 'password';
+const dbPassword = process.env.DB_PASSWORD || '';
 const dbName = process.env.DB_NAME || 'vibe_coding';
 
 // Create connection pool
